@@ -3,72 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planeta Ligado - Newsletter Camaqua</title>
+<title>Planeta Ligado - Camaqua</title>
 <style>
-  body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background: #f4f9f4; color: #1f2d1f; }
-  header { background: #2f7a3d; color: #fff; padding: 32px 20px; text-align: center; }
-  header h1 { margin: 0 0 8px 0; font-size: 2em; }
-  header p { margin: 0; font-size: 1.05em; }
-  main { max-width: 800px; margin: 0 auto; padding: 24px 20px 60px; }
-  section { background: #fff; border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-  section h2 { color: #2f7a3d; border-bottom: 2px solid #cfe8d2; padding-bottom: 8px; }
-  .ods-tags { display: flex; gap: 10px; margin-bottom: 16px; }
-  .ods-tag { background: #2f7a3d; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; }
-  .cta { text-align: center; background: #ecf6ec; }
-  .cta a { display: inline-block; background: #2f7a3d; color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; }
-  footer { text-align: center; padding: 20px; color: #567856; font-size: 0.9em; }
-  ul { padding-left: 20px; }
+  * { box-sizing: border-box; }
+  body { font-family: Verdana, Arial, sans-serif; margin: 0; padding: 0; background: #f4f9f4; color: #1f2d1f; font-size: 18px; line-height: 1.5; }
+  a { color: #1c5c28; }
+
+  nav { position: sticky; top: 0; background: #2f7a3d; padding: 10px 0; z-index: 10; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  nav a { display: block; color: #fff; text-decoration: none; font-weight: bold; padding: 10px 16px; border-radius: 8px; font-size: 1em; }
+  nav a:hover, nav a:focus { background: #24632f; }
+
+  header.hero { background: linear-gradient(180deg, #2f7a3d, #3f9450); color: #fff; padding: 40px 20px; text-align: center; }
+  header.hero h1 { margin: 0 0 10px 0; font-size: 2.3em; }
+  header.hero p { margin: 0 auto; max-width: 560px; font-size: 1.2em; }
+  .btn-grande { display: inline-block; background: #ffcb3d; color: #24321f; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2em; margin-top: 20px; box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
+  .btn-grande:hover { background: #ffd766; }
+
+  main { max-width: 780px; margin: 0 auto; padding: 10px 16px 60px; }
+  section { background: #fff; border-radius: 14px; padding: 26px 22px; margin-top: 24px; box-shadow: 0 1px 5px rgba(0,0,0,0.08); scroll-margin-top: 70px; }
+  section h2 { color: #1c5c28; font-size: 1.6em; margin-top: 0; display: flex; align-items: center; gap: 10px; }
+  .icone-titulo { font-size: 1.3em; }
+  ul.lista-dicas { padding-left: 0; list-style: none; margin: 16px 0 0; }
+  ul.lista-dicas li { background: #eef7ee; border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
+  ul.lista-dicas li::before { content: "✅ "; }
+
+  .cta { text-align: center; background: #fff8e6; border: 2px dashed #ffcb3d; }
+  .cta a.btn-grande { background: #2f7a3d; color: #fff; }
+  .cta a.btn-grande:hover { background: #24632f; }
+
+  .noticia { border-left: 5px solid #2f7a3d; padding: 10px 16px; margin-bottom: 16px; background: #f7fbf7; border-radius: 0 10px 10px 0; }
+  .noticia .data { display: block; font-size: 0.9em; color: #4c6b4c; font-weight: bold; margin-bottom: 4px; }
+  .aviso-novidade { font-size: 0.95em; color: #4c6b4c; text-align: center; margin-top: 10px; }
+
+  footer { text-align: center; padding: 26px 16px; color: #4c6b4c; font-size: 0.95em; }
+  @media (max-width: 480px) {
+    header.hero h1 { font-size: 1.8em; }
+    body { font-size: 17px; }
+  }
 </style>
 </head>
 <body>
-<header>
+
+<nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#agua">Agua</a></li>
+    <li><a href="#energia">Energia</a></li>
+    <li><a href="#novidades">Novidades</a></li>
+    <li><a href="#fale-com-a-gente">Fale com a gente</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="inicio">
   <h1>Planeta Ligado</h1>
-  <p>Newsletter da comunidade do bairro Camaqua - zona sul de Porto Alegre</p>
+  <p>Um espaco simples e feito para voce, morador do Camaqua, ficar por dentro de dicas de agua e energia - e contar pra gente o que precisa melhorar no bairro.</p>
+  <a class="btn-grande" href="#fale-com-a-gente">Quero contar minha opiniao</a>
 </header>
+
 <main>
-  <section>
-    <div class="ods-tags">
-      <span class="ods-tag">ODS 6 - Agua Potavel e Saneamento</span>
-      <span class="ods-tag">ODS 7 - Energia Limpa e Acessivel</span>
+  <section id="agua">
+    <h2><span class="icone-titulo">💧</span> Agua no nosso bairro</h2>
+    <p>Em algumas partes do Camaqua ainda falta rede de esgoto. Isso pode deixar a agua suja e trazer doencas para as familias. Olha o que a gente pode fazer, juntos, para ajudar:</p>
+    <ul class="lista-dicas">
+      <li>Nao jogue lixo ou oleo de cozinha nas ruas ou nas valas.</li>
+      <li>Viu esgoto a ceu aberto ou vazamento de agua? Avise a prefeitura.</li>
+      <li>Participe dos mutiroes de limpeza do bairro quando tiver.</li>
+    </ul>
+  </section>
+
+  <section id="energia">
+    <h2><span class="icone-titulo">⚡</span> Energia sem desperdicio</h2>
+    <p>Usar energia com cuidado ajuda a economizar na conta de luz e tambem ajuda o meio ambiente, porque tratar e levar agua até sua casa tambem gasta energia.</p>
+    <ul class="lista-dicas">
+      <li>Troque lampadas antigas por lampadas de LED.</li>
+      <li>Tire da tomada os aparelhos que nao estao sendo usados.</li>
+      <li>Aproveite a luz do sol durante o dia, sem precisar acender a luz.</li>
+    </ul>
+  </section>
+
+  <section id="novidades">
+    <h2><span class="icone-titulo">📰</span> Novidades da semana</h2>
+    <p>Toda semana a gente traz uma novidade nova aqui. Volte sempre para conferir!</p>
+
+    <div class="noticia">
+      <span class="data">06 de julho de 2026</span>
+      <strong>O site foi ao ar! 🎉</strong>
+      <p>A newsletter Planeta Ligado esta no ar! A partir de agora, toda semana vamos trazer novidades sobre agua, energia e as acoes que estamos fazendo no Camaqua. Fique de olho!</p>
     </div>
-    <h2>Sobre este projeto</h2>
-    <p>O Planeta Ligado e uma iniciativa de extensao universitaria que busca dialogar com a comunidade do Camaqua sobre dois temas que caminham juntos: o saneamento basico e o uso responsavel da energia. Partes do nosso bairro ainda enfrentam dificuldades de saneamento, e isso tem relacao direta com o consumo de energia, ja que captar, tratar e distribuir agua exige energia, e o uso consciente de energia pode reduzir esse impacto.</p>
+
+    <p class="aviso-novidade">(Espaco reservado para a proxima novidade da semana)</p>
+  </section>
+
+  <section class="cta" id="fale-com-a-gente">
+    <h2><span class="icone-titulo">📢</span> Fale com a gente</h2>
+    <p>A sua opiniao e muito importante! Conte pra gente os problemas de agua ou energia que voce ve no seu dia a dia. E rapido, leva menos de 3 minutos.</p>
+    <a class="btn-grande" href="#" id="link-formulario">Responder o formulario</a>
+    <p style="font-size:0.9em; margin-top:16px;">Tambem tem QR code no mural da Paroquia Sao Vicente Martir, para quem preferir usar o celular por ali.</p>
   </section>
 
   <section>
-    <h2>Saneamento basico no Camaqua</h2>
-    <p>A falta de rede de esgoto adequada pode causar contaminacao da agua, alagamentos e problemas de saude para as familias do bairro. Pequenas atitudes, como nao descartar lixo em vias e cursos de agua, e cobrar melhorias junto aos orgaos responsaveis, ajudam a comunidade a avancar nesse tema.</p>
-    <ul>
-      <li>Evite descartar lixo ou oleo de cozinha em bocas de lobo e valas.</li>
-      <li>Denuncie vazamentos e esgoto a ceu aberto aos canais da prefeitura.</li>
-      <li>Participe de mutiroes de limpeza e conscientizacao no bairro.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Energia limpa e acessivel</h2>
-    <p>O uso eficiente de energia eletrica reduz custos para as familias e diminui a pressao sobre os recursos naturais, incluindo a agua usada na geracao de energia. Pequenos habitos fazem diferenca na conta de luz e no meio ambiente.</p>
-    <ul>
-      <li>Troque lampadas antigas por modelos de LED.</li>
-      <li>Desligue aparelhos da tomada quando nao estiverem em uso.</li>
-      <li>Aproveite a luz natural durante o dia.</li>
-    </ul>
-  </section>
-
-  <section class="cta">
-    <h2>Sua opiniao importa!</h2>
-    <p>Queremos ouvir voce: quais problemas de saneamento ou energia voce ve no seu dia a dia no Camaqua? Responda nosso formulario rapido, e leva menos de 3 minutos.</p>
-    <a href="#" id="link-formulario">Responder o formulario</a>
-    <p style="font-size:0.85em; margin-top:14px;">Tambem disponivel via QR code no mural da Paroquia Sao Vicente Martir.</p>
-  </section>
-
-  <section>
-    <h2>Quem esta por tras do Planeta Ligado</h2>
-    <p>Este projeto e desenvolvido por Gabriel Longarfino dos Santos, como parte de um projeto de extensao universitaria em parceria com a comunidade do bairro Camaqua, com apoio da Paroquia Sao Vicente Martir.</p>
+    <h2><span class="icone-titulo">🙂</span> Quem faz o Planeta Ligado</h2>
+    <p>Este projeto e feito por Gabriel Longarfino dos Santos, como parte de um projeto de extensao universitaria, com apoio da Paroquia Sao Vicente Martir e em parceria com a comunidade do bairro Camaqua.</p>
   </section>
 </main>
+
 <footer>
-  <p>Planeta Ligado - Projeto de Extensao Universitaria | ODS 6 e ODS 7 | Camaqua, Porto Alegre - RS</p>
+  <p>Planeta Ligado | Projeto de Extensao Universitaria | Camaqua, Porto Alegre - RS</p>
 </footer>
+
 </body>
 </html>
