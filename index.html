@@ -5,6 +5,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planeta Ligado - Camaqua</title>
 <style>
+  /* ===== Mobile first: estilos base para celular ===== */
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { font-family: Verdana, Arial, sans-serif; margin: 0; padding: 0; background: #f4f9f4; color: #1f2d1f; font-size: 16px; line-height: 1.55; }
+  a { color: #1c5c28; }
+
+  nav { position: sticky; top: 0; background: #2f7a3d; padding: 8px 4px; z-index: 10; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+  nav a { display: block; color: #fff; text-decoration: none; font-weight: bold; padding: 8px 10px; border-radius: 8px; font-size: 0.85em; }
+  nav a:hover, nav a:focus { background: #24632f; }
+
+  header.hero { background: linear-gradient(180deg, #2f7a3d, #3f9450); color: #fff; padding: 28px 16px; text-align: center; }
+  header.hero h1 { margin: 0 0 8px 0; font-size: 1.7em; }
+  header.hero p { margin: 0 auto; max-width: 560px; font-size: 1em; }
+
+  .btn-grande { display: block; width: 100%; background: #ffcb3d; color: #24321f; padding: 14px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.05em; margin-top: 18px; box-shadow: 0 3px 8px rgba(0,0,0,0.2); text-align: center; }
+  .btn-grande:hover { background: #ffd766; }
+
+  main { max-width: 780px; margin: 0 auto; padding: 8px 12px 50px; }
+  section { background: #fff; border-radius: 12px; padding: 18px 16px; margin-top: 18px; box-shadow: 0 1px 5px rgba(0,0,0,0.08); scroll-margin-top: 64px; }
+  section h2 { color: #1c5c28; font-size: 1.25em; margin-top: 0; display: flex; align-items: center; gap: 8px; }
+  .icone-titulo { font-size: 1.2em; }
+  ul.lista-dicas { padding-left: 0; list-style: none; margin: 14px 0 0; }
+  ul.lista-dicas li { background: #eef7ee; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; font-size: 0.98em; }
+  ul.lista-dicas li::before { content: "✅ "; }
+
+  .cta { text-align: center; background: #fff8e6; border: 2px dashed #ffcb3d; }
+  .cta a.btn-grande { background: #2f7a3d; color: #fff; }
+  .cta a.btn-grande:hover { background: #24632f; }
+
+  .noticia { border-left: 5px solid #2f7a3d; padding: 10px 14px; margin-bottom: 14px; background: #f7fbf7; border-radius: 0 10px 10px 0; }
+  .noticia .data { display: block; font-size: 0.85em; color: #4c6b4c; font-weight: bold; margin-bottom: 4px; }
+  .aviso-novidade { font-size: 0.9em; color: #4c6b4c; text-align: center; margin-top: 10px; }
+
+  footer { text-align: center; padding: 22px 14px; color: #4c6b4c; font-size: 0.9em; }
+
+  /* ===== A partir daqui, melhorias para telas maiores (tablet/desktop) ===== */
+  @media (min-width: 600px) {
+    body { font-size: 18px; }
+    nav { padding: 10px 0; }
+    nav a { font-size: 1em; padding: 10px 16px; }
+    header.hero { padding: 40px 20px; }
+    header.hero h1 { font-size: 2.3em; }
+    header.hero p { font-size: 1.2em; }
+    .btn-grande { display: inline-block; width: auto; padding: 16px 32px; font-size: 1.2em; margin-top: 20px; }
+    main { padding: 10px 16px 60px; }
+    section { padding: 26px 22px; margin-top: 24px; border-radius: 14px; }
+    section h2 { font-size: 1.6em; }
+    ul.lista-dicas li { padding: 12px 16px; font-size: 1em; }
+    .noticia { padding: 10px 16px; }
+    .noticia .data { font-size: 0.9em; }
+    .aviso-novidade { font-size: 0.95em; }
+    footer { padding: 26px 16px; font-size: 0.95em; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#agua">Agua</a></li>
+    <li><a href="#energia">Energia</a></li>
+    <li><a href="#novidades">Novidades</a></li>
+    <li><a href="#fale-com-a-gente">Fale com a gente</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="inicio">
+  <h1>Planeta Ligado</h1>
+  <p>Um espaco simples e feito para voce, morador do Camaqua, ficar por dentro de dicas de agua e energia - e contar pra gente o que precisa melhorar no bairro.</p>
+  <a class="btn-grande" href="#fale-com-a-gente">Quero contar minha opiniao</a>
+</header>
+
+<main>
+  <section id="agua">
+    <h2><span class="icone-titulo">💧</span> Agua no nosso bairro</h2>
+    <p>Em algumas partes do Camaqua ainda falta rede de esgoto. Isso pode deixar a agua suja e trazer doencas para as familias. Olha o que a gente pode fazer, juntos, para ajudar:</p>
+    <ul class="lista-dicas">
+      <li>Nao jogue lixo ou oleo de cozinha nas ruas ou nas valas.</li>
+      <li>Viu esgoto a ceu aberto ou vazamento de agua? Avise a prefeitura.</li>
+      <li>Participe dos mutiroes de limpeza do bairro quando tiver.</li>
+    </ul>
+  </section>
+
+  <section id="energia">
+    <h2><span class="icone-titulo">⚡</span> Energia sem desperdicio</h2>
+    <p>Usar energia com cuidado ajuda a economizar na conta de luz e tambem ajuda o meio ambiente, porque tratar e levar agua até sua casa tambem gasta energia.</p>
+    <ul class="lista-dicas">
+      <li>Troque lampadas antigas por lampadas de LED.</li>
+      <li>Tire da tomada os aparelhos que nao estao sendo usados.</li>
+      <li>Aproveite a luz do sol durante o dia, sem precisar acender a luz.</li>
+    </ul>
+  </section>
+
+  <section id="novidades">
+    <h2><span class="icone-titulo">📰</span> Novidades da semana</h2>
+    <p>Toda semana a gente traz uma novidade nova aqui. Volte sempre para conferir!</p>
+
+    <div class="noticia">
+      <span class="data">12 de julho de 2026</span>
+      <strong>⚡ Dica da semana: cuidado com o chuveiro eletrico</strong>
+      <p>Voce sabia que o chuveiro eletrico e um dos aparelhos que mais consomem energia dentro de casa? Reduzir o banho em so alguns minutos ja ajuda bastante na conta de luz. Dica simples: use o registro "verao" (modo mais fraco) nos dias de calor, e evite banhos longos no horario entre 18h e 21h, quando a rede de energia fica mais sobrecarregada.</p>
+    </div>
+
+    <div class="noticia">
+      <span class="data">06 de julho de 2026</span>
+      <strong>O site foi ao ar! 🎉</strong>
+      <p>A newsletter Planeta Ligado esta no ar! A partir de agora, toda semana vamos trazer novidades sobre agua, energia e as acoes que estamos fazendo no Camaqua. Fique de olho!</p>
+    </div>
+
+    <p class="aviso-novidade">(Espaco reservado para a proxima novidade da semana)</p>
+  </section>
+
+  <section class="cta" id="fale-com-a-gente">
+    <h2><span class="icone-titulo">📢</span> Fale com a gente</h2>
+    <p>A sua opiniao e muito importante! Conte pra gente os problemas de agua ou energia que voce ve no seu dia a dia. E rapido, leva menos de 3 minutos.</p>
+    <a class="btn-grande" href="#" id="link-formulario">Responder o formulario</a>
+    <p style="font-size:0.9em; margin-top:16px;">Tambem tem QR code no mural da Paroquia Sao Vicente Martir, para quem preferir usar o celular por ali.</p>
+  </section>
+
+  <section>
+    <h2><span class="icone-titulo">🙂</span> Quem faz o Planeta Ligado</h2>
+    <p>Este projeto e feito por Gabriel Longarfino dos Santos, como parte de um projeto de extensao universitaria, com apoio da Paroquia Sao Vicente Martir e em parceria com a comunidade do bairro Camaqua.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Planeta Ligado | Projeto de Extensao Universitaria | Camaqua, Porto Alegre - RS</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planeta Ligado - Camaqua</title>
+<style>
   * { box-sizing: border-box; }
   body { font-family: Verdana, Arial, sans-serif; margin: 0; padding: 0; background: #f4f9f4; color: #1f2d1f; font-size: 18px; line-height: 1.5; }
   a { color: #1c5c28; }
